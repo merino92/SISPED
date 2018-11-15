@@ -1,0 +1,77 @@
+{% extends 'base/index.html'%} 
+
+{% block content%}
+	   <div class="row">
+        
+        <div class="col-md-8 col-sm-8 col-lg-8 col-xlg-8">
+            <div class="card">
+                <div class="box bg-ligth text-left">
+                        <h1 class="text-black">Bienvenido:</h1>
+                        <div class="row">
+                            <div class="col-md-8 col-sm-8 col-xlg-8 col-lg-8 offset-1">
+                                <h2 class="font-light text-black text-left">Dra. Ana Maria de Espinal</h2>
+                            </div> 
+                            <div class="col-md-3 col-sm-3 col-xlg-3 col-lg-3 pb-5">
+                                <h1 class=" text-center"><img src="{{url_for('static',filename='assets/images/users/1.jpg')}}"  alt="user" class="rounded-circle" width="90"></h1>
+                            </div>
+                        </div>
+                                 
+                                
+                            </div>
+                
+            </div>
+        </div>   
+       </div>
+	<div class="row">
+		 <div class="col-md-6 col-lg-6 col-xlg-6">
+                        <div class="card card-hover">
+                            <div class="box bg-success text-center">
+                                <h1 class="font-light text-white"><i class="mdi mdi-account"></i></h1>
+                                <h6 class="text-white">Pacientes Antendidos El dia de ahora</h6> 
+                                <h6 class="text-white" id="pacientes">6</h6>
+                            </div>
+                        </div>
+         </div>
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-6 col-xlg-6">
+                        <div class="card card-hover">
+                            <div class="box bg-danger text-center">
+                                <h1 class="font-light text-white"><i class="mdi mdi-account-plus"></i></h1>
+                                <h6 class="text-white">Pacientes por Atender ahora</h6>
+                                <h6 id="patender" class="text-white">10</h6>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+		
+	</div> 
+    <div class="row">
+         <div class="col-md-5 col-lg-5 col-lg-5 col-xlg-5 offset-4  col-lg-offset-1 col-xlg-offset-1">
+                     <div class="card card-hover">
+                            <div class="box bg-cyan text-center">
+                                <h1 class="font-light text-white"><i class="mdi  mdi-account-check"></i></h1>
+                                <h6 class="text-white">Pacientes Antendidos en el Mes</h6> 
+                                <h6 class="text-white" id="pacientesmes">6</h6>
+                            </div>
+                        </div>
+         </div>
+
+     </div>    
+   
+                
+   </div>
+
+{%endblock%} 
+
+{%block script%}
+<script type="text/javascript" src="{{url_for('static',filename='custom/home.js')}}" ></script>
+<script type="text/javascript" src="{{url_for('static',filename='assets/extra-libs/multicheck/datatable-checkbox-init.js')}}" ></script>
+<script type="text/javascript" src="{{url_for('static',filename='assets/extra-libs/DataTables/datatables.min.js')}}" ></script>
+<script type="text/javascript" src="{{url_for('static',filename='assets/extra-libs/multicheck/jquery.multicheck.js')}}" ></script>
+<script type="text/javascript" src="{{url_for('static',filename='assets/libs/popper.js/dist/umd/popper.min.js')}}" ></script>
+<script type="text/javascript" src="{{url_for('static',filename='assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js')}}" ></script>
+
+
+
+{%endblock%}
